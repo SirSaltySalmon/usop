@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  header nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  main {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+  }
+  .tag-filter-container, .character-section, .results-section, .user-stats, .error-section, .information-section {
+    margin-bottom: 2rem;
+  }
+  .information-section {
+    text-align: center;
+  }
+  .character-card {
+    text-align: center;
+  }
+  .character-card img {
+    max-width: 100%;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+  #character-tags {
+    margin-top: 0.5rem;
+  }
+  #character-tags span {
+    display: inline-block;
+    background: #eee;
+    color: #333;
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    margin: 0 0.2rem;
+    font-size: 0.9rem;
+  }
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .actions button, #apply-filters, #next-character, #reset-stats, #reload {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .actions button:hover, #apply-filters:hover, #next-character:hover, #reset-stats:hover, #reload:hover {
+    background: #444;
+  }
+  .results-section {
+    text-align: center;
+  }
+  .user-stats, .tag-filter-container {
+    background: #f0f0f0;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+  @media (max-width: 700px) {
+    main {
+      padding: 1rem;
+    }
+    .character-card img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+/* Tag Filtering */
+.search-box {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.search-box:focus {
+    border-color: #007bff;
+}
+
+.tag-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.control-btn:hover {
+    background: #f8f9fa;
+}
+
+.tag-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px;
+    background: #fafafa;
+}
+
+.tag-item {
+    display: inline-block;
+    margin: 3px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    user-select: none;
+    position: relative;
+}
+
+/* Neutral state (default) */
+.tag-item.neutral {
+    background: #e9ecef;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+.tag-item.neutral:hover {
+    background: #dee2e6;
+}
+
+/* Included state */
+.tag-item.included {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.tag-item.included:hover {
+    background: #c3e6cb;
+}
+
+.tag-item.included::after {
+    content: "✓";
+    margin-left: 6px;
+    font-weight: bold;
+}
+
+/* Excluded state */
+.tag-item.excluded {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.tag-item.excluded:hover {
+    background: #f5c6cb;
+}
+
+.tag-item.excluded::after {
+    content: "✕";
+    margin-left: 6px;
+    font-weight: bold;
+}
+
+.tag-item.hidden {
+    display: none;
+}
+
+.filter-summary {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.legend {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #e3f2fd;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.legend-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.demo-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}

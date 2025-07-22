@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ultimate Smash or Pass</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html" style="color:inherit;text-decoration:none;">Ultimate Smash or Pass</a></h1>
+    <nav>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://ko-fi.com/sirsalmon">Donate</a>
+        <a href="https://github.com/SirSaltySalmon/usop">GitHub</a>
+    </nav>
+  </header>
+  <main>
+    <section class="tag-filter-container">
+        <div class="legend">
+            <div class="legend-item"><strong>Left Click:</strong> Include tag (must have)</div>
+            <div class="legend-item"><strong>Right Click:</strong> Exclude tag (must not have)</div>
+            <div class="legend-item"><strong>Middle Click/Ctrl+Click:</strong> Reset to neutral</div>
+        </div>
+        <input type="text" class="search-box" placeholder="Search tags..." id="tagSearch">
+        <div class="tag-controls">
+            <button class="control-btn" onclick="clearAllFilters()">Clear All</button>
+            <button class="control-btn" onclick="includeVisible()">Include Visible</button>
+            <button class="control-btn" onclick="excludeVisible()">Exclude Visible</button>
+        </div>
+        <div class="tag-list tag-filters" id="tagContainer">
+            <!-- Tags will be populated here -->
+        </div>
+        <div class="filter-summary" id="filterSummary">
+            <!-- Filter summary will be displayed here -->
+        </div>
+        <button id="apply-filters" onclick="loadCharacter()">Apply Filters</button>
+    </section>
+    <section class="error-section" style="display:none;">
+      <p>Error: No more characters found. Try changing filters!</p>
+      <p>Database might be exhausted if you've been here for a while. You can reset stats then press reload if you want to have another go.</p>
+      <button id="reload" onclick="loadCharacter()">Reload</button>
+    </section>
+    <section class="character-section">
+      <div class="character-card">
+        <img id="character-image" src="" alt="Character" />
+      </div>
+      <div class="actions">
+        <button id="vote-yes" onclick="handleVote(true)">Yes</button>
+        <button id="vote-no" onclick="handleVote(false)">No</button>
+        <button id="skip" onclick="handleSkip()">Skip</button>
+      </div>
+    </section>
+    <section class="information-section">
+        <h2 id="character-name"></h2>
+        <p id="character-franchise"></p>
+        <div id="character-tags"></div>
+    </section>
+    <section class="results-section" style="display:none;">
+      <h2>Results</h2>
+      <div id="vote-results"></div>
+      <button id="next-character" onclick="loadCharacter()">Next</button>
+    </section>
+    <section class="user-stats">
+      <h2>Your Stats</h2>
+      <div id="user-stats"></div>
+      <button id="reset-stats" onclick="resetStats()">Reset Stats</button>
+    </section>
+    <p>All characters belong to their respective franchises and copyright holders. I am not affiliated with any of the franchises or copyright holders.</p>
+    <p>This is a personal project and I do not make any money from it. However, if you would like to support the upkeep of the site, you can buy me a coffee <a href="https://ko-fi.com/sirsalmon">here</a>.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
