@@ -4,6 +4,9 @@ Ultimate Smash or Pass is a website that allows you to ask yourself a very simpl
 ## ...But why?
 I made this website to learn about Node.js and SQLite. I thought this would be fun to make (and it was). I do not encourage the blatant objectification of characters and I hope creators will take their characters' appearance on this website with a grain of salt.
 
+## Did you use AI?
+I had a LOT of AI assistance as I was not familiar with the syntax and rules of the new languages and tools I had to learn. AI is not used for any other purpose than code generation.
+
 ## I want these characters to be on this website!
 This site is a work in progress and I would love to add more characters if I have the time. Feel free to suggest on the GitHub page. Though I can't guarantee that my lazy ass will uphold anything, so please don't expect too much. Right now I'm figuring out a way to automate the process first.
 
