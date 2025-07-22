@@ -1,0 +1,2 @@
+Add images of characters. Have the image name set the the character's name in lowercase without space.
+eg. Sailor Moon -> sailormoon.png
