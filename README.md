@@ -1,7 +1,7 @@
 ## About
 Ultimate Smash or Pass is a website that allows you to ask yourself a very simple question for each character you see. You can then see if you can be validated for your opinion or not based on what others think.
 
-## ...But why?##
+## ...But why?
 I made this website to learn about Node.js and SQLite. I thought this would be fun to make (and it was). I do not encourage the blatant objectification of characters and I hope creators will take their characters' appearance on this website with a grain of salt.
 
 ## I want these characters to be on this website!
